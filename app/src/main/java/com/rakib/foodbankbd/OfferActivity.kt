@@ -34,7 +34,11 @@ class OfferActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.textViewOfferLocation -> Toast.makeText(this@OfferActivity, "This feature is coming soon!", Toast.LENGTH_LONG).show()
+            R.id.textViewOfferLocation -> Toast.makeText(
+                this@OfferActivity,
+                "This feature is coming soon!",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 }

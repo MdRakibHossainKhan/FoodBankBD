@@ -10,9 +10,13 @@ import com.rakib.foodbankbd.OfferActivity
 import com.rakib.foodbankbd.R
 import com.rakib.foodbankbd.entities.OfferObject
 
-class OfferRecyclerViewAdapter(private val context: Context, private val allOffers: List<OfferObject>) : RecyclerView.Adapter<OfferRecyclerViewHolder>() {
+class OfferRecyclerViewAdapter(
+    private val context: Context,
+    private val allOffers: List<OfferObject>
+) : RecyclerView.Adapter<OfferRecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferRecyclerViewHolder {
-        val layoutView = LayoutInflater.from(parent.context).inflate(R.layout.layout_area, parent, false)
+        val layoutView =
+            LayoutInflater.from(parent.context).inflate(R.layout.layout_area, parent, false)
         return OfferRecyclerViewHolder(layoutView)
     }
 

@@ -27,23 +27,28 @@ class OffersActivity : AppCompatActivity() {
     private fun areaWiseOfferShower() {
         when (areaCode) {
             0 -> {
-                recyclerViewOffer.adapter = OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromShyamoli)
+                recyclerViewOffer.adapter =
+                    OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromShyamoli)
                 textViewOffersTitle.text = "Offers in Shyamoli"
             }
             1 -> {
-                recyclerViewOffer.adapter = OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromDhanmondi)
+                recyclerViewOffer.adapter =
+                    OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromDhanmondi)
                 textViewOffersTitle.text = "Offers in Dhanmondi"
             }
             2 -> {
-                recyclerViewOffer.adapter = OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromBanani)
+                recyclerViewOffer.adapter =
+                    OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromBanani)
                 textViewOffersTitle.text = "Offers in Banani"
             }
             3 -> {
-                recyclerViewOffer.adapter = OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromMirpur)
+                recyclerViewOffer.adapter =
+                    OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromMirpur)
                 textViewOffersTitle.text = "Offers in Mirpur"
             }
             4 -> {
-                recyclerViewOffer.adapter = OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromWari)
+                recyclerViewOffer.adapter =
+                    OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromWari)
                 textViewOffersTitle.text = "Offers in Wari"
             }
         }
@@ -52,134 +57,173 @@ class OffersActivity : AppCompatActivity() {
     private val allOffersFromShyamoli: List<OfferObject>
         get() {
             val offers: MutableList<OfferObject> = ArrayList()
-            offers.add(OfferObject(
+            offers.add(
+                OfferObject(
                     "Couple Offer",
                     R.drawable.best_couple_offer_hakka_square_shyamoli,
                     "For two person. Price is inclusive VAT. Food tastes ok.",
                     349.0,
                     "Undefined",
                     "Hakka Square (Shyamoli Square)",
-                    "* Set Menu\n* Cold Drinks"))
+                    "* Set Menu\n* Cold Drinks"
+                )
+            )
             return offers
         }
 
     private val allOffersFromDhanmondi: List<OfferObject>
         get() {
             val offers: MutableList<OfferObject> = ArrayList()
-            offers.add(OfferObject(
+            offers.add(
+                OfferObject(
                     "Matha Noshto Offer",
                     R.drawable.matha_noshto_offer_the_bitcoin_cafe_panthapath,
                     "Price is inclusive VAT. Food is delicious but service is so so. You can try this with your friends and family.",
                     220.0,
                     "Undefined",
                     "The Bitcoin Cafe (Panthapath)",
-                    "* Tower Nachos\n* 4 Piece BBQ Wings"))
-            offers.add(OfferObject(
+                    "* Tower Nachos\n* 4 Piece BBQ Wings"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Black Bun Charcoal Burger (Mini)",
                     R.drawable.black_bun_charcoal_burger_mini_burger_queen_dhanmondi,
                     "Price is inclusive VAT. Food is so so. You can try this with your friends and family.",
                     95.0,
                     "Undefined",
                     "Burger Queen (Dhanmondi)",
-                    "* Black Bun Charcoal Burger (Mini)"))
-            offers.add(OfferObject(
+                    "* Black Bun Charcoal Burger (Mini)"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Ramen",
                     R.drawable.ramen_cheese_lab_panthapath,
                     "Food is good. You can try this with your friends and family.",
                     250.0,
                     "Undefined",
                     "Cheese Lab (Panthapath)",
-                    "* Ramen"))
-            offers.add(OfferObject(
+                    "* Ramen"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Chicken Cheese Burger",
                     R.drawable.chicken_cheese_burger_melt_town_dhanmondi,
                     "Food is delicious. Try this with your friends and family.",
                     99.0,
                     "Undefined",
                     "Melt Town (Dhanmondi)",
-                    "* Chicken Cheese Burger"))
-            offers.add(OfferObject(
+                    "* Chicken Cheese Burger"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Pasta",
                     R.drawable.pasta_melt_town_dhanmondi,
                     "Food is delicious. Try this with your friends and family.",
                     99.0,
                     "Undefined",
                     "Melt Town (Dhanmondi)",
-                    "* Pasta"))
+                    "* Pasta"
+                )
+            )
             return offers
         }
 
     private val allOffersFromBanani: List<OfferObject>
         get() {
             val offers: MutableList<OfferObject> = ArrayList()
-            offers.add(OfferObject(
+            offers.add(
+                OfferObject(
                     "Ultimate Chocolate Cake",
                     R.drawable.ultimate_chocolate_cake_tabaq_coffee_gulshan,
                     "Price is inclusive VAT. Very delicious dessert. You must try this with your friends and family.",
                     380.0,
                     "Undefined",
                     "Tabaq Coffee (Gulshan)",
-                    "* Chocolate Cake"))
+                    "* Chocolate Cake"
+                )
+            )
             return offers
         }
 
     private val allOffersFromMirpur: List<OfferObject>
         get() {
             val offers: MutableList<OfferObject> = ArrayList()
-            offers.add(OfferObject(
+            offers.add(
+                OfferObject(
                     "BBQ Feast",
                     R.drawable.bbq_feast_peri_pasta_mirpur,
                     "Very delicious food. Try this with your friends and family.",
                     205.0,
                     "Undefined",
                     "Peri Pasta (Mirpur)",
-                    "* Fried Rice\n* 2 Piece Chicken Drum\n* Chinese Vegetable\n* Garnish Salad"))
-            offers.add(OfferObject(
+                    "* Fried Rice\n* 2 Piece Chicken Drum\n* Chinese Vegetable\n* Garnish Salad"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Naga Wave Pasta",
                     R.drawable.naga_wave_pasta_cheese_factory_mirpur,
                     "Very delicious pasta. Try this with your friends and family. Price is inclusive VAT.",
                     225.0,
                     "Undefined",
                     "Cheese Lab (Mirpur)",
-                    "* Naga Pasta"))
-            offers.add(OfferObject(
+                    "* Naga Pasta"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Cheese and BBQ Chicken Pizza",
                     R.drawable.cheese_and_bbq_chicken_pizza_cheese_factory_mirpur,
                     "Very delicious pizza. Try this with your friends and family. Price is inclusive VAT.",
                     395.0,
                     "Undefined",
                     "Cheese Lab (Mirpur)",
-                    "* Large Pizza"))
-            offers.add(OfferObject(
+                    "* Large Pizza"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Mango Milkshake",
                     R.drawable.mango_milkshake_burger_queen_mirpur,
                     "Price is inclusive VAT. Food is so so. You can try this with your friends and family.",
                     70.0,
                     "Undefined",
                     "Burger Queen (Mirpur)",
-                    "* Mango Milkshake"))
-            offers.add(OfferObject(
+                    "* Mango Milkshake"
+                )
+            )
+            offers.add(
+                OfferObject(
                     "Vengaboys Burger Mini",
                     R.drawable.vengaboys_burger_mini_burger_queen_mirpur,
                     "Price is inclusive VAT. Food is so so. You can try this with your friends and family.",
                     70.0,
                     "Undefined",
                     "Burger Queen (Mirpur)",
-                    "* Mini Burger"))
+                    "* Mini Burger"
+                )
+            )
             return offers
         }
 
     private val allOffersFromWari: List<OfferObject>
         get() {
             val offers: MutableList<OfferObject> = ArrayList()
-            offers.add(OfferObject(
+            offers.add(
+                OfferObject(
                     "SP: 02",
                     R.drawable.sp_02_grand_haveli_wari,
                     "Very delicious food. You must try this with your friends and family. Decoration is nice.",
                     250.0,
                     "Undefined",
                     "Grand Haveli (Wari)",
-                    "* Set Menu"))
+                    "* Set Menu"
+                )
+            )
             return offers
         }
 }
