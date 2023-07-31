@@ -31,6 +31,7 @@ class OfferRecyclerViewAdapter(
             val gson = gsonBuilder.create()
             val stringObjectRepresentation = gson.toJson(singleOffer)
             offerIntent.putExtra("OFFER_CODE", stringObjectRepresentation)
+
             context.startActivity(offerIntent)
         }
     }

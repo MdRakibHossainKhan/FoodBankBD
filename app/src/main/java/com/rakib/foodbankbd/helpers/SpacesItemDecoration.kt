@@ -27,6 +27,7 @@ class SpacesItemDecoration(
             if (position < spanCount) {
                 outRect.top = spacing
             }
+
             outRect.bottom = spacing
         } else {
             outRect.left = column * spacing / spanCount

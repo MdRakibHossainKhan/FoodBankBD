@@ -4,52 +4,60 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.rakib.foodbankbd.adapters.OfferRecyclerViewAdapter
+import com.rakib.foodbankbd.databinding.ActivityOffersBinding
 import com.rakib.foodbankbd.entities.OfferObject
 import com.rakib.foodbankbd.helpers.SpacesItemDecoration
-import kotlinx.android.synthetic.main.activity_offers.*
-import java.util.*
 
 class OffersActivity : AppCompatActivity() {
-    var areaCode = 0
+    private var areaCode = 0
+    private lateinit var binding: ActivityOffersBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_offers)
+        binding = ActivityOffersBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         areaCode = intent.extras!!.getInt("AREA_CODE")
+
         val gridLayoutManager = GridLayoutManager(this@OffersActivity, 2)
-        recyclerViewOffer.layoutManager = gridLayoutManager
-        recyclerViewOffer.setHasFixedSize(true)
-        recyclerViewOffer.addItemDecoration(SpacesItemDecoration(2, 24, true))
+        binding.recyclerViewOffer.layoutManager = gridLayoutManager
+        binding.recyclerViewOffer.setHasFixedSize(true)
+        binding.recyclerViewOffer.addItemDecoration(SpacesItemDecoration(2, 24, true))
+
         areaWiseOfferShower()
     }
 
     private fun areaWiseOfferShower() {
         when (areaCode) {
             0 -> {
-                recyclerViewOffer.adapter =
+                binding.recyclerViewOffer.adapter =
                     OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromShyamoli)
-                textViewOffersTitle.text = "Offers in Shyamoli"
+                binding.textViewOffersTitle.text = "Offers in Shyamoli"
             }
+
             1 -> {
-                recyclerViewOffer.adapter =
+                binding.recyclerViewOffer.adapter =
                     OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromDhanmondi)
-                textViewOffersTitle.text = "Offers in Dhanmondi"
+                binding.textViewOffersTitle.text = "Offers in Dhanmondi"
             }
+
             2 -> {
-                recyclerViewOffer.adapter =
+                binding.recyclerViewOffer.adapter =
                     OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromBanani)
-                textViewOffersTitle.text = "Offers in Banani"
+                binding.textViewOffersTitle.text = "Offers in Banani"
             }
+
             3 -> {
-                recyclerViewOffer.adapter =
+                binding.recyclerViewOffer.adapter =
                     OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromMirpur)
-                textViewOffersTitle.text = "Offers in Mirpur"
+                binding.textViewOffersTitle.text = "Offers in Mirpur"
             }
+
             4 -> {
-                recyclerViewOffer.adapter =
+                binding.recyclerViewOffer.adapter =
                     OfferRecyclerViewAdapter(this@OffersActivity, allOffersFromWari)
-                textViewOffersTitle.text = "Offers in Wari"
+                binding.textViewOffersTitle.text = "Offers in Wari"
             }
         }
     }
@@ -68,6 +76,7 @@ class OffersActivity : AppCompatActivity() {
                     "* Set Menu\n* Cold Drinks"
                 )
             )
+
             return offers
         }
 
@@ -129,6 +138,7 @@ class OffersActivity : AppCompatActivity() {
                     "* Pasta"
                 )
             )
+
             return offers
         }
 
@@ -146,6 +156,7 @@ class OffersActivity : AppCompatActivity() {
                     "* Chocolate Cake"
                 )
             )
+
             return offers
         }
 
@@ -207,6 +218,7 @@ class OffersActivity : AppCompatActivity() {
                     "* Mini Burger"
                 )
             )
+
             return offers
         }
 
@@ -224,6 +236,7 @@ class OffersActivity : AppCompatActivity() {
                     "* Set Menu"
                 )
             )
+
             return offers
         }
 }

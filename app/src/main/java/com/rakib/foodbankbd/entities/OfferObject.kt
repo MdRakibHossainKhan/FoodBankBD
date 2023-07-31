@@ -9,7 +9,6 @@ class OfferObject(
     val offerLocation: String,
     val offerItem: String
 ) {
-
     override fun toString(): String {
         return "Offer Name: $offerName"
     }

@@ -13,7 +13,6 @@ class AreaRecyclerViewAdapter(
     private val context: Context,
     private val allAreas: List<AreaObject>
 ) : RecyclerView.Adapter<AreaRecyclerViewHolder>() {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AreaRecyclerViewHolder {
         val layoutView =
             LayoutInflater.from(parent.context).inflate(R.layout.layout_area, parent, false)
@@ -28,6 +27,7 @@ class AreaRecyclerViewAdapter(
         holder.areaImage.setOnClickListener {
             val areaIntent = Intent(context, OffersActivity::class.java)
             areaIntent.putExtra("AREA_CODE", position)
+
             context.startActivity(areaIntent)
         }
     }
